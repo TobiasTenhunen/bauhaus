@@ -1,0 +1,70 @@
+@font-face {
+    font-family: josefin;
+    src: url(fonts/JosefinSans-VariableFont_wght.ttf);
+}
+
+:root {
+    font-size: calc(1vw + 10px);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: josefin;
+    touch-action: pan-y;
+}
+
+#shapes {
+    position: fixed;
+    right: 20vw;
+    display: none;
+    z-index: -1;
+    overflow: visible;
+    width: 100vw;
+    height: 100vh;
+    will-change: transform;
+}
+
+h1 {
+    position: sticky;
+    top: calc(50vh - 10vw);
+    font-size: 20vw;
+    user-select: none;
+}
+
+main {
+    width: 50vw;
+    margin: auto;
+    text-align: left;
+    text-align: justify;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 200vh;
+}
+
+.body-text {
+    font-size: 1rem;
+    padding: 40px 0;
+    opacity: 0.2;
+    filter: blur(0.6px);
+    transform: scale(0.9);
+    transition: 0.4s;
+}
+
+.body-text.activated {
+    filter: blur(0px);
+    transform: scale(1);
+    opacity: 1;
+}
+
+.body-text p {
+    margin-bottom: 1em;
+}
